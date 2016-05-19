@@ -21,7 +21,7 @@ public static class EncodeToTGAExtension
 
                 binaryWriter.Write((byte)0);                    // IDLength (not in use)
                 binaryWriter.Write((byte)0);                    // ColorMapType (not in use)
-                binaryWriter.Write((byte)10);                    // DataTypeCode == 10 (Runlength encoded RGB images)
+                binaryWriter.Write((byte)10);                   // DataTypeCode == 10 (Runlength encoded RGB images)
                 binaryWriter.Write((short)0);                   // ColorMapOrigin (not in use)
                 binaryWriter.Write((short)0);                   // ColorMapLength (not in use)
                 binaryWriter.Write((byte)0);                    // ColorMapDepth (not in use)
@@ -107,7 +107,7 @@ public static class EncodeToTGAExtension
 
     //
 
-    // RLE Encoding
+    // RLE Helper
 
     private enum RLEPacketType { RLE, RAW }
 
