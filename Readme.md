@@ -2,7 +2,7 @@
 
 Adds a EncodeToTGA Extension-Method to Texture2D. Uses Run-Length-Encoding and can Encode RGB24 and ARGB32 Formats (equal to EncodeToPNG and EncodeToJPG).
 
-As some software doesn't support RLE-Encoded TGA files also supports uncompressed Encoding. Default is RLE.
+As some software doesn't support RLE-Encoded TGA-Files, also supports uncompressed Encoding. The Default is RLE.
 
 #(Un)License
 
