@@ -84,10 +84,6 @@ public static class EncodeToTGAExtension
                         if (iBytesPerPixel == iBytesPerPixelARGB32)
                             binaryWriter.Write(c32Pixel.a);
                     }
-
-                    binaryWriter.Write(0);          // Offset of meta-information (not in use)
-                    binaryWriter.Write(0);          // Offset of Developer-Area (not in use)
-                    binaryWriter.Write(c_arV2Signature); // ImageDescriptor (not in use)
                 }
                 else
                 {
@@ -158,6 +154,10 @@ public static class EncodeToTGAExtension
                         iPacketStart = iPacketEnd;
                     }
                 }
+
+                binaryWriter.Write(0);          // Offset of meta-information (not in use)
+                binaryWriter.Write(0);          // Offset of Developer-Area (not in use)
+                binaryWriter.Write(c_arV2Signature); // ImageDescriptor (not in use)
             }
 
             return memoryStream.ToArray();
