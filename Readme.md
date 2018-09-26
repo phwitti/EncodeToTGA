@@ -4,6 +4,19 @@ Adds a EncodeToTGA Extension-Method to Texture2D. Uses Run-Length-Encoding and c
 
 As some software doesn't support RLE-Encoded TGA-Files, also supports uncompressed Encoding. The Default is RLE.
 
+```c-sharp
+
+Texture2D texture;
+
+// Default usage -- write tga-data to file
+File.WriteAllBytes("file.tga", texture.EncodeToTGA()); 
+
+// Encode w/o compression -- in most cases you won't need that. 
+// Only use, if you work with software that doesn't support Compressed TGAs.
+File.WriteAllBytes("file.tga", texture.EncodeToTGA(EncodeToTGAExtension.Compression.None));
+
+```
+
 #(Un)License
 
 This is free and unencumbered software released into the public domain.
