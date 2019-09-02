@@ -1,3 +1,5 @@
+> Since Unity2018.3 this feature is officially supported by the ImageConversion-Class and part of Unity. Use that, if you have no definite reason not to (i.e. Unity does not use Run-Length-Encoding -- If you need that or have certain disc-space requirements, you might still want to use this implementation).
+
 # Texture2D.EncodeToTGA (Unity)
 
 Adds a EncodeToTGA Extension-Method to Texture2D. Uses Run-Length-Encoding and can Encode RGB24 and ARGB32 Formats (equally to EncodeToPNG and EncodeToJPG).
